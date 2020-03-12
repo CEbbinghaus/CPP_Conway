@@ -32,27 +32,6 @@ float render::getPixelScale(){
 
 void render::draw(){
 	getPixelScale();
-	//for from (cameraX - width * scale * 0.5) to (cameraX + width * scale * 0.5)
-	//float tmpScale = scale;
-	//tmpScale = 1;
-
-
-	//int xoB = (screenWidth * (1.0f - tmpScale) * 0.5);
-	//int yoB = (screenHeight * (1.0f - tmpScale) * 0.5);
-
-
-	//int xoE = screenWidth -  xoB;
-	//int yoE = screenWidth - yoB;
-	//for (int x = m_cameraX + xoB; x < m_cameraX + xoE; x++) {
-	//	for (int y = m_cameraY + yoB; y < m_cameraY + yoE; y++) {
-	//		if (x >= drawField->f_width || y >= drawField->f_height)
-	//			continue;
-
-	//		bool isActive = drawField->m_draw[y][x] & 1;
-	//		if(isActive)
-	//			drawBox(xScreenOffset + (x * xScreenScale), yScreenOffset + (y * yScreenScale), xScreenScale, yScreenScale);
-	//	}
-	//}
 	int xoffset = getXOffset();
 	int yoffset = getYOffset();
 

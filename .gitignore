@@ -1,3 +1,4 @@
-\.vs/
-
-imgui\.ini
+.vs
+.vscode
+imgui.ini
+temp/*

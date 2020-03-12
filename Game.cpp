@@ -7,21 +7,6 @@
 #include "libary/Array.h"
 #include "libary/List.h"
 #include "../dependencies/glfw/include/GLFW/glfw3.h"
-//#include "wtypes.h"
-
-//static void GetDesktopResolution(int& horizontal, int& vertical)
-//{
-//	RECT desktop;
-//	// Get a handle to the desktop window
-//	const HWND hDesktop = GetDesktopWindow();
-//	// Get the size of screen to the variable desktop
-//	GetWindowRect(hDesktop, &desktop);
-//	// The top left corner will have coordinates (0,0)
-//	// and the bottom right corner will have coordinates
-//	// (horizontal, vertical)
-//	horizontal = desktop.right;
-//	vertical = desktop.bottom;
-//}
 
 Game::Game() {
 	m_timer = 0.0f;
@@ -54,8 +39,8 @@ bool Game::startup() {
 
 	menu->addButton(
 		new Button("Eraser", {
-			new aie::Texture("./Assets/EraseUp.png"),
-			new aie::Texture("./Assets/EraseDown.png")
+			new aie::Texture("./bin/images/EraseUp.png"),
+			new aie::Texture("./bin/images/EraseDown.png")
 			}, [&](Button* b){
 				for (int i = 0; i < 2; i++) {
 					for (int x = 0; (unsigned)x < gameField->f_width; ++x) {
@@ -69,8 +54,8 @@ bool Game::startup() {
 	);
 	menu->addButton(
 		new Button("Shuffle", {
-			new aie::Texture("./Assets/ShuffleUp.png"),
-			new aie::Texture("./Assets/ShuffleDown.png")
+			new aie::Texture("./bin/images/ShuffleUp.png"),
+			new aie::Texture("./bin/images/ShuffleDown.png")
 		}, [&](Button* b) {
 			generation = 0;
 			for (int i = 0; i < 2; i++) {
@@ -88,10 +73,10 @@ bool Game::startup() {
 	);
 	//menu->addButton(
 	//	new Button("Draw", {
-	//		new aie::Texture("./Assets/PenUp.png"),
-	//		new aie::Texture("./Assets/PenDown.png"),
-	//		new aie::Texture("./Assets/BrushUp.png"),
-	//		new aie::Texture("./Assets/BrushDown.png")
+	//		new aie::Texture("./bin/images/PenUp.png"),
+	//		new aie::Texture("./bin/images/PenDown.png"),
+	//		new aie::Texture("./bin/images/BrushUp.png"),
+	//		new aie::Texture("./bin/images/BrushDown.png")
 	//		}, [&](Button* b){
 	//			generation = 0;
 	//		},
@@ -99,10 +84,10 @@ bool Game::startup() {
 	//	));
 	menu->addButton(
 		new Button("Play", {
-			new aie::Texture("./Assets/PauseUp.png"),
-			new aie::Texture("./Assets/PauseDown.png"),
-			new aie::Texture("./Assets/PlayUp.png"),
-			new aie::Texture("./Assets/PlayDown.png")
+			new aie::Texture("./bin/images/PauseUp.png"),
+			new aie::Texture("./bin/images/PauseDown.png"),
+			new aie::Texture("./bin/images/PlayUp.png"),
+			new aie::Texture("./bin/images/PlayDown.png")
 		}, [&](Button* b) {
 			if (running)stop();
 			else start();
